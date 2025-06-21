@@ -4,3 +4,9 @@ h9 {
   margin-bottom: 25px;
   text-shadow: 0 0 20px #9e3ffd;
 }
+
+.text {
+  font-size: 1em;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
