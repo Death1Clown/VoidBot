@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoidBot Dashboard</title>
+  <style>
+    body {
+      background: #0f0c29;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #9e3ffd;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .dash-button {
+      background: linear-gradient(135deg, #9e3ffd, #302b63);
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 12px rgba(158, 63, 253, 0.3);
+    }
+
+    .dash-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(158, 63, 253, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>VoidBot Control Center</h1>
+  <div class="button-group">
+    <a href="creator-dashboard.html" class="dash-button">Creator Dashboard</a>
+    <a href="member-dashboard.html" class="dash-button">Member Dashboard</a>
+    <a href="admin-dashboard.html" class="dash-button">Admin Dashboard</a>
+  </div>
+</body>
+</html>
