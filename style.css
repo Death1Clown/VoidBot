@@ -6,7 +6,11 @@ h9 {
 }
 
 .text {
-  font-size: 1em;
+  font-size: 2em;
   margin-top: 0px;
   margin-bottom: 1px;
 }
+
+.p {
+  font-size: 0.25em;
+  text-spacing: 1px;
