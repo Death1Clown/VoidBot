@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Void Club Contact</title> <style>
+    body {
+      margin: 0;
+      padding: 0; /* Ensures no default padding */
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Gradient from previous design */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column; /* Stack header and content vertically */
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+      height: 100vh;
+    }
+
+    /* Header styles, copied and adjusted from the previous 'home' page */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent background */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: absolute; /* Position at the very top */
+      top: 0;
+      z-index: 10; /* Ensure header is above other content */
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: #ffffff; /* Ensure logo text is white */
+    }
+
+    .logo-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+      color: #9e3ffd; /* Iconic purple color */
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b47cff; /* Lighter purple on hover */
+    }
+
+    /* Main container for the content */
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent dark background */
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 80px; /* Space from the header */
+      max-width: 700px; /* Max width to keep content readable */
+      width: 90%; /* Responsive width */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+      color: orangered;
+      text-shadow: 0 0 10px darkred;
+      margin-bottom: 0px;
+    }
+    
+    h4 {
+      font-size: 10px;
+      color: papayawhip;
+      letter-spacing: 1px;
+      margin-bottom: 0px;
+    }
+    
+    h5 {
+      font-size: 5em;
+      letter-spacing: 1px;
+      text-shadow: 0 0 20px darkred;
+      color: orangered;
+      margin-bottom: 0px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 0px;
+    }
+
+    .action-button { /* Renamed from .contact-button to be more generic */
+      display: inline-block; /* Allows padding and margin */
+      margin-top: 30px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      background-color: #9e3ffd; /* Main button color */
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .action-button:hover {
+      background-color: #b47cff; /* Lighter purple on hover */
+      transform: translateY(-2px); /* Slight lift effect */
+    }
+
+    /* Line separator style */
+    .separator {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Error</h5>
+    <hr class="separator">
+    <h4>Could not find page!</h4>
+    <p>Current progression: Fixing</p>
+  </div>
+  <div class="container">
+    <a href="Home.html" class="action-button">
+      Home
+    </a>
+  </div>
+</body>
+</html>
