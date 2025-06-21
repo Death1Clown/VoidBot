@@ -1,3 +1,12 @@
+<!-- public/home.html -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  socket.emit("user-joined", { page: "home.html" });
+
+  // If user navigates to another page dynamically:
+  // socket.emit("page-changed", "support.html");
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
