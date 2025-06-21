@@ -1,4 +1,4 @@
-const storedHash = "e3b6c3f2f3c3b0c6a8f3a4b7c1e9f3a0c4d2e1f3a8b7c6d4e2f1a0b3c2d1e0f0";
+const storedHash = "3456756yg45u67az5k7sm56bue56uie567k8fc6b78t6nkog67inrf67ib7urf67m";
 
 function checkPassword() {
   const input = document.getElementById("password").value;
