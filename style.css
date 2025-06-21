@@ -1,16 +1,12 @@
-h9 {
-  font-size: 1.8em;
-  margin-top: 30px;
-  margin-bottom: 25px;
-  text-shadow: 0 0 20px #9e3ffd;
+form {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
 }
-
-.text {
-  font-size: 2em;
-  margin-top: 0px;
-  margin-bottom: 1px;
+input, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
 }
-
-.p {
-  font-size: 0.25em;
-  text-spacing: 1px;
