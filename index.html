@@ -11,6 +11,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #ffffff;
       display: flex;
+      flex-direction: column; /* Changed to column to stack header and content */
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -22,12 +23,20 @@
       padding: 40px 60px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 20px; /* Added margin to separate from header */
     }
 
     h1 {
       font-size: 3em;
       letter-spacing: 1px;
       text-shadow: 0 0 10px #9e3ffd;
+      margin-bottom: 20px; /* Spacing below the main heading */
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 25px;
     }
 
     .btn {
@@ -46,12 +55,75 @@
     .btn:hover {
       background-color: #b47cff;
     }
+
+    /* Styles for the header */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+    
+        .nav-links2 a {
+      color: #9e3ffd;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.5em;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b47cff;
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <div class="nav-links2">
+      <a href="home.html">
+        <span class="logo-icon">🌀</span> Void Club Discord Bot
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="doc.html">Documentary</a> </div>
+  </header>
+
   <div class="container">
     <h1>Void Club Discord Bot</h1>
-    <a href="home.html" class="btn">Enter The Void</a>
+    <p>_________________</p>
+    </a>
+    <p style="margin-top: 30px;">
+        <a href="home.html" class="btn">Enter The Void</a>
+    </p>
   </div>
+
 </body>
 </html>
