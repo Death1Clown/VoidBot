@@ -1,2 +1,2 @@
-# ADMIN ONLY FILE!
-## Continuing may cause serious consequences!
+ADMIN ONLY FILE!
+Continuing may cause serious consequences!
