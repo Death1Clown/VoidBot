@@ -1,47 +1,21 @@
 // server.js
 const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-
-const allowedEmails = ['you@example.com', 'admin@voidclub.com'];
-const codes = {}; // Stores codes temporarily
-
+const fs = require('fs');
 const app = express();
-app.use(bodyParser.json());
+const PORT = 3000;
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'yourgmail@gmail.com',
-    pass: 'your-app-password' // Use an app-specific password or OAuth
-  }
-});
+app.use(express.static('public')); // Serve your HTML from /public
 
-app.post('/send-code', (req, res) => {
-  const { email } = req.body;
-  if (!allowedEmails.includes(email)) return res.status(403).send('Email not allowed');
+app.get('/log-ip', (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const timestamp = new Date().toISOString();
+  const logEntry = `${timestamp} - ${ip}\n`;
 
-  const code = Math.floor(100000 + Math.random() * 900000).toString();
-  codes[email] = code;
-
-  transporter.sendMail({
-    from: '"VoidBot Auth" <yourgmail@gmail.com>',
-    to: email,
-    subject: 'Your verification code',
-    text: `Your VoidBot access code is: ${code}`
+  fs.appendFile('ip-log.txt', logEntry, err => {
+    if (err) console.error('Failed to log IP:', err);
   });
 
-  res.send('Code sent');
+  res.sendStatus(200);
 });
 
-app.post('/verify-code', (req, res) => {
-  const { email, code } = req.body;
-  if (codes[email] === code) {
-    delete codes[email];
-    res.send('Access granted');
-  } else {
-    res.status(401).send('Invalid code');
-  }
-});
-
-app.listen(3000, () => console.log('Server listening on port 3000'));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
