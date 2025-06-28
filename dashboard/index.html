@@ -15,6 +15,50 @@
       height: 100vh;
       margin: 0;
     }
+    
+        header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+    
+        .nav-links2 a {
+      color: #9e3ffd;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.5em;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b47cff;
+    }
 
     h1 {
       font-size: 3em;
@@ -49,11 +93,24 @@
   </style>
 </head>
 <body>
-  <h1>VoidBot Control Center</h1>
+  <div class=container>
+  <h1>VoidBot Dashboard Center</h1>
   <div class="button-group">
-    <a href="dashboard/creator.html" class="dash-button">Creator Dashboard</a>
-    <a href="dashboard/member.html" class="dash-button">Member Dashboard</a>
+    <a href="https://death1clown.github.io/VoidBot/dashboard/creator.html" class="dash-button">Creator Dashboard</a>
+    <a href="https://death1clown.github.io/VoidBot/dashboard/member.html" class="dash-button">Member Dashboard</a>
     <a href="https://death1clown.github.io/VoidBot/admin/admin/secret/token/admin.html" class="dash-button">Admin Dashboard</a>
-  </div>
+    </div>
+    </div>
+    <header>
+    <div class="nav-links2">
+      <a href="home.html">
+        <span class="logo-icon">🌀</span> Void Club Discord Bot
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="https://death1clown.github.io/VoidBot/home.html">Home</a>
+      <a href="https://death1clown.github.io/VoidBot/support.html">Support</a>
+      <a href="https://death1clown.github.io/VoidBot/doc.html">Documentary</a> </div>
+  </header>
 </body>
 </html>
