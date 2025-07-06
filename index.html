@@ -109,6 +109,65 @@
     .nav-links a:hover {
       color: #b47cff;
     }
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent dark background */
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 80px; /* Space from the header */
+      max-width: 700px; /* Max width to keep content readable */
+      width: 90%; /* Responsive width */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+    
+    .new {
+      font-size: 2em;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 0 0 20px #9e3ffd;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px #9e3ffd;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .action-button { /* Renamed from .contact-button to be more generic */
+      display: inline-block; /* Allows padding and margin */
+      margin-top: 30px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      background-color: #9e3ffd; /* Main button color */
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .action-button:hover {
+      background-color: #b47cff; /* Lighter purple on hover */
+      transform: translateY(-2px); /* Slight lift effect */
+    }
+
+    /* Line separator style */
+    .separator {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+      margin: 40px 0;
+    }
   </style>
 </head>
 <body>
@@ -124,10 +183,17 @@
       <a href="support.html">Support</a>
       <a href="doc.html">Documentary</a> </div>
   </header>
-
   <div class="container">
-    <h1>Void Club Discord Bot</h1>
-    <p>_________________</p>
+    <img src="images/logo.png" alt="Void Bot Logo" style="width: 150px; margin-bottom: 20px;">
+    <h1>Invite Void Bot to your Discord Server!</h1>
+    <hr class="separator">
+    <a href="https://discord.com/oauth2/authorize?client_id=1375787906123431936&permissions=1759218604441591&response_type=code&redirect_uri=https%3A%2F%2Fdeath1clown.github.io%2FVoidBot%2Findex.html&integration_type=0&scope=bot" class="action-button" target="_blank">
+      Invite
+    </a>
+  </div>
+    <div class="container">
+    <h1>Void Bot</h1>
+    <p>_________________________________________</p>
     </a>
     <p style="margin-top: 30px;">
         <a href="home.html" class="btn">Enter The Void</a>
