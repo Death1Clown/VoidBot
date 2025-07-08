@@ -1,1 +1,200 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  socket.emit("user-joined", { page: "index.html" });
 
+  // If user navigates to another page dynamically:
+  // socket.emit("page-changed", "support.html");
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Void Club Discord Bot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column; /* Changed to column to stack header and content */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 20px; /* Added margin to separate from header */
+    }
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px #9e3ffd;
+      margin-bottom: 20px; /* Spacing below the main heading */
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background-color: #9e3ffd;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b47cff;
+    }
+
+    /* Styles for the header */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+    
+        .nav-links2 a {
+      color: #9e3ffd;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.5em;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b47cff;
+    }
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent dark background */
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 80px; /* Space from the header */
+      max-width: 700px; /* Max width to keep content readable */
+      width: 90%; /* Responsive width */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+    
+    .new {
+      font-size: 2em;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 0 0 20px #9e3ffd;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px #9e3ffd;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .action-button { /* Renamed from .contact-button to be more generic */
+      display: inline-block; /* Allows padding and margin */
+      margin-top: 30px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      background-color: #9e3ffd; /* Main button color */
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .action-button:hover {
+      background-color: #b47cff; /* Lighter purple on hover */
+      transform: translateY(-2px); /* Slight lift effect */
+    }
+
+    /* Line separator style */
+    .separator {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-links2">
+      <a href="home.html">
+        <span class="logo-icon">🌀</span> Void Bot
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="home">Home</a>
+      <a href="support">Support</a>
+      <a href="doc">Documentary</a> </div>
+  </header>
+  <div class="container">
+    <img src="logo.png" alt="Void Bot Logo" style="width: 150px; margin-bottom: 20px;">
+    <h1>News</h1>
+    <hr class="separator">
+    <a href="https://discord.gg/vKV3bXHd5Y" class="action-button" target="_blank">
+      Join The Discord
+    </a>
+  </div>
+  <div class="container">
+    <h2>Offline Status!</h2>
+    <p>VoidBot has been set to Offline Status while we are working on it! The Bot will not work while Offline.</p>
+    <p>If you need any help or support click here and create a ticket!</p>
+    <a href="https://discord.com/channels/1391335503722446868/1391335505827991588" class="action-button" target="_blank">create a ticket</a>
+  </div>
+</body>
+</html>
